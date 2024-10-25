@@ -9,7 +9,7 @@ mongoose.connection.on("connected", () => {
     console.log("Connected To MongoDB");
 });
 
-mongoose.connection.on("error", (errror) => {
+mongoose.connection.on("error", (error) => {
     console.log("Connection Error: " + error);
 });
 

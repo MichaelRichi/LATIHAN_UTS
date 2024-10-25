@@ -1,13 +1,13 @@
 const Produk = require("../models/produk");
 
-const Index = (req, res, next) => {
+const produkIndex = (req, res, next) => {
     Produk.find({}, { __v: 0 })
-      .then((Produk) => {
+      .then((produk) => {
         const responseMessage = {
             code: 200,
             success: true,
             message: "Successfull",
-            data: mhs
+            data: produk
         };
         res.status(200).json(responseMessage);
       })
@@ -21,22 +21,20 @@ const Index = (req, res, next) => {
       });
 };
 
-const insert = (req, res, next) => {
+const produkInsert = (req, res, next) => {
     const produk = new Produk({
       nama: req.body.nama,
-      npm: req.body.npm,
-      email: req.body.email,
-      tanggal_lahir: req.body.tanggal_lahir,
-      aktif: true
+      deskripsi: req.body.deskripsi,
+      harga: req.body.harga,
+      stok: req.body.stok,
     });
   
-    produk
-      .save()
+    produk.save()
       .then((result) => {
             const responseMessage = {
                 code: 200,
                 success: true,
-                message: "Successfull",
+                message: "Product Successfully Created",
                 data: result
             };
             res.status(200).json(responseMessage);
@@ -51,4 +49,4 @@ const insert = (req, res, next) => {
         });
 };
 
-module.exports = { Index, insert }
+module.exports = { produkIndex, produkInsert };
