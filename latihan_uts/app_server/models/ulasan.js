@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const transaksiSchema = new mongoose.transaksiSchema({
+const ulasanSchema = new mongoose.ulasanSchema({
     produk_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Produk',
@@ -11,16 +11,16 @@ const transaksiSchema = new mongoose.transaksiSchema({
         ref: 'Pengguna',
         required: true,
     },
-    jumlah:{
+    rating:{
         type: Number,
     },
-    total_harga:{
-        type: Number,
+    komentar:{
+        type: String,
     },
-    tanggal_transaksi:{
+    tanggal_ulasan:{
         type: Date,
     },
 });
 
-const Transaksi = mongoose.model('transaksi', transaksiSchema);
-module.exports = Transaksi;
+const Ulasan = mongoose.model('ulasan', ulasanSchema);
+module.exports = Ulasan;
