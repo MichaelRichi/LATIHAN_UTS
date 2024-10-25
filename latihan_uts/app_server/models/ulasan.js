@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ulasanSchema = new mongoose.ulasanSchema({
+const ulasanSchema = new mongoose.Schema({
     produk_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Produk',

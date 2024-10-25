@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const transaksiSchema = new mongoose.transaksiSchema({
+const transaksiSchema = new mongoose.Schema({
     produk_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Produk',

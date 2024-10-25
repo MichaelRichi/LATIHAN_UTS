@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const kategoriSchema = new mongoose.kategoriSchema({
+const kategoriSchema = new mongoose.Schema({
     nama_kategori: {
         type: String,
     },

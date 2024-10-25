@@ -42,7 +42,7 @@ const produkInsert = (req, res, next) => {
         .catch((e) => {
             const responseMessage = {
                 code: 400,
-                success: true,
+                success: false,
                 message: "Bad request"
             };
             res.status(400).json(responseMessage);

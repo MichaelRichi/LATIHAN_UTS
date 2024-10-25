@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const diskonSchema = new mongoose.diskonSchema({
+const diskonSchema = new mongoose.Schema({
     produk_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Produk',

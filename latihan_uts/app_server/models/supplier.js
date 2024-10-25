@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const supplierSchema = new mongoose.supplierSchema({
+const supplierSchema = new mongoose.Schema({
     nama_supplier: {
         type: String,
     },
